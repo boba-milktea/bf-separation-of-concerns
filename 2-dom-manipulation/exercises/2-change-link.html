@@ -24,26 +24,23 @@
         <section class="things-to-study">
             <div id="side to inspect" class="exercise-output">
                 <div id="expected">
-                    <a
-                        href="https://www.badgerbadgerbadger.com"
-                        expected="_blank"
+                    <a href="https://www.badgerbadgerbadger.com" target="_blank"
                         >learn about badgers</a
                     >
                 </div>
 
-                <div id="actual">
-                    <a
-                        href="https://www.badgerbadgerbadger.com"
-                        expected="blank"
-                        >learn about pigs</a
-                    >
-                </div>
+                <div id="actual"></div>
 
                 <script id="dom-manipulation-script">
                     'use strict';
                     debugger;
+                    const linkEle = document.createElement('a');
+                    linkEle.href = 'https://www.badgerbadgerbadger.com';
+                    linkEle.target = '_blank';
+                    linkEle.innerText = 'learn about badgers';
 
-                    // write me! (... without using cloneNode, that's kind of cheating)
+                    const actual = document.getElementById('actual');
+                    actual.appendChild(linkEle);
                 </script>
             </div>
 

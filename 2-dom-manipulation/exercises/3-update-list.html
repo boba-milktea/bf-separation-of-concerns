@@ -45,7 +45,13 @@
                     'use strict';
                     debugger;
 
-                    // write me! (... without using cloneNode, that's kind of cheating)
+                    const actual = document.getElementById('actual');
+                    const ulEle = actual.children[1];
+                    const list = ['robots', 'solar systems', 'oil'];
+
+                    list.forEach((item, i) => {
+                        ulEle.children[i].innerText = item;
+                    });
                 </script>
             </div>
 

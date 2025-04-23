@@ -1,6 +1,6 @@
 'use strict';
 
-const divEl = document.createElement('ul');
+const divEl = document.createElement('div');
 divEl.innerHTML = `
   <table>
     <tbody>
@@ -13,6 +13,15 @@ console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 
 // --- write some code ---
 //  you want to create a 2x2 table with a, b, c, d in the squares
+const innerText = ['a', 'b', 'c', 'd'];
+
+const trEls = divEl.querySelectorAll('tr');
+trEls.forEach((trEl) => {
+    let index = 0;
+    trEl.innerHTML = `
+   <td>${innerText[index++]}</td>
+   <td>${innerText[index++]}</td>`;
+});
 
 // --- --- --- --- --- ---
 

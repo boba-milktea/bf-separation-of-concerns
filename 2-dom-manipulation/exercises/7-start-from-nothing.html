@@ -44,6 +44,26 @@
                 <script id="dom-manipulation-script">
                     'use strict';
                     debugger;
+                    const actual = document.getElementById('actual');
+                    const h2Ele = document.createElement('h2');
+                    h2Ele.innerText = 'a list of things';
+
+                    const ulEle = document.createElement('ul');
+                    ulEle.start = '0';
+
+                    const items = [
+                        'robots',
+                        'solar systems',
+                        '<a href="https://www.badgerbadgerbadger.com" expected="_blank">learn about badgers</a>',
+                        'oil',
+                    ];
+                    items.forEach((item) => {
+                        const liEle = document.createElement('li');
+                        liEle.innerHTML = item;
+                        ulEle.append(liEle);
+                    });
+
+                    actual.append(h2Ele, ulEle);
 
                     // write me! (... without using cloneNode, that's kind of cheating)
                 </script>

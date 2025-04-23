@@ -1,6 +1,6 @@
 'use strict';
 
-const divEl = document.createElement('ul');
+const divEl = document.createElement('div');
 divEl.innerHTML = `
   <p></p>
   <section></section>
@@ -9,6 +9,15 @@ divEl.innerHTML = `
 console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 
 // --- write some code ---
+
+const navEl = document.createElement('nav');
+
+divEl.replaceChild(navEl, divEl.children[0]);
+const h2El = document.createElement('h2');
+divEl.insertBefore(h2El, divEl.children[1]);
+const pEl = document.createElement('p');
+divEl.replaceChild(pEl, divEl.children[3]);
+
 //  replace the <p>
 //  insert something before the <section>
 //  remove the <h1>
