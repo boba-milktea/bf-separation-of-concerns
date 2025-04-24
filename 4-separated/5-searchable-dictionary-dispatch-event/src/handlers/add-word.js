@@ -1,11 +1,13 @@
 import {
     INPUT_ID,
+    LIST_ID,
     OUTPUT_ID,
     QUERY_EVENT,
     QUERY_ID,
 } from '../../data/constants.js';
 
 import { state } from '../../data/state.js';
+import { wordList } from '../components/wordList.js';
 
 export const addWord = () => {
     debugger;
@@ -23,6 +25,10 @@ export const addWord = () => {
     // notice: the logs will show "query" before "add"
     //  the query handler is called, executed, and logs before this handler logs
 
+    const newWordList = wordList(state.words);
+    const list = document.getElementById(LIST_ID);
+    list.innerHTML = '';
+    list.append(newWordList);
     // log for the developer
     console.log('addHandler:', state);
 };

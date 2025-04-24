@@ -2,7 +2,7 @@ import { state } from '../../data/state.js';
 import { determineWinner } from '../utils/determine-winner.js';
 
 export const placeMove = (event) => {
-    debugger;
+    // debugger;
     // read & process user input
     const index = event.target.id;
 
@@ -28,5 +28,10 @@ export const placeMove = (event) => {
 
     // // a challenge, make this game detect if there is a winner
     // const winner = determineWinner(board);
-    // ...
+    const winner = determineWinner(board);
+    if (winner) {
+        alert(
+            winner === 'tie' ? `oh, it's tie.` : `we got a winner! - ${winner}`,
+        );
+    }
 };
