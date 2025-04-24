@@ -1,3 +1,6 @@
+// styles
+export const LIST_CLASS = 'list-class';
+
 // events
 
 export const ADD_EVENT = 'click';
@@ -13,6 +16,8 @@ export const RESET_EVENT = 'click';
 export const INPUT_ID = 'word';
 
 export const OUTPUT_ID = 'result';
+
+export const LIST_ID = 'list';
 
 export const ADD_ID = 'add-button';
 

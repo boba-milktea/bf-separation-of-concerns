@@ -9,3 +9,10 @@
 input {
     text-align: center;
 }
+
+.list-class {
+    /* https://www.w3schools.com/howto/howto_css_list_without_bullets.asp */
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}

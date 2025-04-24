@@ -40,10 +40,12 @@
 
             // 1. A user can see all numbers listed in an alert
             const displayNumbersHandler = (
+                e,
                 arrayOfNumbers = numbers,
                 message = 'all numbers',
             ) => {
-                debugger;
+                // debugger;
+                console.log(arrayOfNumbers);
                 const joinNumbers = (acc, next) => `${acc}\n${next}`;
                 const allNumbersListed = arrayOfNumbers.reduce(
                     joinNumbers,
