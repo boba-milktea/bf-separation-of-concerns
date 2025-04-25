@@ -1,4 +1,4 @@
-import { list } from './util.js';
+import list from './util.js';
 
 describe('list: generates a list string from an array of strings', () => {
     describe('list: correctly lists items', () => {

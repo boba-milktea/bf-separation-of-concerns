@@ -19,4 +19,19 @@ const camelCaseToTitleCase = (camelCaseString) => {
     return result.charAt(0).toUpperCase() + result.slice(1);
 };
 
-const actual = (obj) => {};
+const actual = (obj) => {
+    const dlEl = document.createElement('dl');
+
+    for (const key in obj) {
+        if (!key.includes('_')) {
+            const dtEl = document.createElement('dt');
+            dtEl.innerText = camelCaseToTitleCase(key);
+            const ddEl = document.createElement('dd');
+            ddEl.innerText = obj[key];
+            ddEl.className = 'value';
+            dlEl.append(dtEl, ddEl);
+        }
+    }
+
+    return dlEl;
+};

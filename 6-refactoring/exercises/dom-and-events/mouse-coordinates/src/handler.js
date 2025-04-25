@@ -1,3 +1,6 @@
-import { formatCoordinates } from './utils.js';
+import formatCoordinates from './util.js';
 
-export const showMouseCoordinates = () => {};
+export const showMouseCoordinates = (e) => {
+    const result = formatCoordinates(e.pageX, e.pageY);
+    document.getElementById('mouse-position').innerHTML = result;
+};
