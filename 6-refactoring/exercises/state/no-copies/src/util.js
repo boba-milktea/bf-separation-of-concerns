@@ -1,4 +1,15 @@
 /**
+ *  add non dublicated string to the state array
+ * @param {string} [string=""] user input
  *
  */
-export const saveNoCopies = () => {};
+
+import { state } from '../data/state.js';
+const saveNoCopies = (string = '') => {
+    const alreadySaved = state.noCopies.includes(string);
+    if (!alreadySaved) {
+        state.noCopies.push(string);
+    }
+};
+
+export default saveNoCopies;

@@ -1,4 +1,4 @@
-import { gameBaord } from './game-board.js';
+import gameBaord from './game-board.js';
 
 describe('gameBaord: renders a list of user screen names and real names', () => {
     describe('tictactoe: X won on the middle column', () => {
