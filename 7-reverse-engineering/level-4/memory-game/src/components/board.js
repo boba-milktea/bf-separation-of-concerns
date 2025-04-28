@@ -4,6 +4,7 @@
 export const board = (x = 2, y = 2) => {
     // create array with shuffled pairs of numbers
     const maxNumber = Math.ceil((x * y) / 2);
+
     const numbers = [...Array(maxNumber).keys()].flatMap((index) => [
         index,
         index,

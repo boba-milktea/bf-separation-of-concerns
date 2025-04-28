@@ -1,2 +1,3 @@
-// this file is the program's Entry Point
-debugger;
+import { eventListener } from '../listeners/eventListener.js';
+
+eventListener(document.getElementById('the-secret'));

@@ -1,2 +1,5 @@
-// this file is the program's Entry Point
-debugger;
+import { clickEvent } from '../listeners/clickEvent.js';
+import { resetEvent } from '../listeners/resetEvent.js';
+
+clickEvent(document.getElementById('board'));
+resetEvent(document.getElementById('reset'));

@@ -8,7 +8,21 @@
     </head>
 
     <body>
-        <div id="user-interface"></div>
+        <section id="user-interface">
+            <form id="user-input">
+                text:
+                <input
+                    name="string"
+                    class="input-field"
+                    placeholder="enter some text"
+                />
+                start:
+                <input name="begin" type="number" placeholder="begin" />
+                length:
+                <input name="end" type="number" placeholder="end" />
+            </form>
+            <code id="program-output"></code>
+        </section>
         <script type="module" src="./src/init/index.js"></script>
     </body>
 </html>

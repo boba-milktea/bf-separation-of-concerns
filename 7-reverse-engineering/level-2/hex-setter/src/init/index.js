@@ -1,2 +1,3 @@
-// this file is the program's Entry Point
-debugger;
+import { changeColor } from '../listeners/changeColor.js';
+
+changeColor(document.getElementById('hex-value'));
