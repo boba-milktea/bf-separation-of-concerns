@@ -1,0 +1,12 @@
+form {
+    display: block;
+    margin-top: 0;
+}
+
+.input-field {
+    width: 30%;
+}
+
+code {
+    font-family: monospace;
+}

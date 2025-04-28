@@ -1,2 +1,3 @@
-// this file is the program's Entry Point
-debugger;
+import { event } from '../listeners/event.js';
+
+event(document.getElementById('user-input'));
