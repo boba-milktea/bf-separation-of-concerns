@@ -1,4 +1,4 @@
-.letter {
+/* .letter {
     display: inline-block;
     padding: 5px;
     border: 1px solid #ddd;
@@ -13,7 +13,7 @@
     padding: 5px;
     margin-left: 10px;
     font-size: 3em;
-}
+} 
 
 .done {
     cursor: default;
@@ -32,4 +32,33 @@ button {
     font-size: 2.5em;
     margin-top: 20px;
     font-family: cursive;
+}*/
+
+body {
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+.stars {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+}
+
+.star {
+    font-size: 2rem;
+    transition: color 300ms ease-in-out;
+}
+
+.output {
+    font-size: 1.8rem;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: rgb(209, 209, 4);
 }
