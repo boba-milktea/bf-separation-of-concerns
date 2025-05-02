@@ -25,7 +25,10 @@ export const handleClick = () => {
         output2.append(quessingElements);
     });
 
-    buildKeyBoard(26);
+    for (let i = 0; i < 26; i++) {
+        const keyBoardEl = buildKeyBoard(i);
+        dom.output1.appendChild(keyBoardEl);
+    }
 
     const guessingLetters = document.querySelectorAll('.letter2');
 

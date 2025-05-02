@@ -1,6 +1,4 @@
-import { dom } from '../dom.js';
-
-export const displayRandom = (random) => {
-    dom.coin.style.backgroundImage =
+export const displayRandom = (random, coin) => {
+    coin.style.backgroundImage =
         random === 1 ? "url('./heads.png')" : "url('./tails.png')";
 };

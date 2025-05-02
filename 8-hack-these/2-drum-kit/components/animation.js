@@ -1,4 +1,4 @@
-import { dom } from '../dom/dom.js';
+import { dom } from '../src/dom/dom.js';
 
 export const animateCrashOrRide = () => {
     dom.crashRide.style.transform = 'rotate(0deg) scale(1.5)';

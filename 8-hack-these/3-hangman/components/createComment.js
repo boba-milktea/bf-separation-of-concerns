@@ -1,16 +1,11 @@
-import { state } from '../data.js';
-import { dom } from '../dom.js';
-
-export const createComment = () => {
-    dom.showLives.innerText = `You have ${state.lives} lives`;
-    if (state.lives < 1) {
-        dom.showLives.innerText = 'Game Over';
+export const createComment = (showLives, lives, guesses, counter, space) => {
+    console.log(lives);
+    showLives.innerText = `You have ${lives} lives`;
+    if (lives < 1) {
+        showLives.innerText = 'Game Over';
     }
 
-    if (
-        state.guesses.length !== 0 &&
-        state.counter + state.space === state.guesses.length
-    ) {
-        dom.showLives.innerText = 'You Win!';
+    if (guesses.length !== 0 && counter + space === guesses.length) {
+        showLives.innerText = 'You Win!';
     }
 };

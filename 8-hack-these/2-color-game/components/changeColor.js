@@ -1,8 +1,4 @@
-import { dom } from '../dom.js';
-
-export const changeColor = (color) => {
-    dom.squares.forEach((square) => {
-        square.style.backgroundColor = color;
-        dom.h1.style.backgroundColor = color;
-    });
+export const changeColor = (square, color, h1) => {
+    square.style.backgroundColor = color;
+    h1.style.backgroundColor = color;
 };

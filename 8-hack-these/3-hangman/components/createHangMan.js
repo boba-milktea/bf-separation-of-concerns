@@ -1,6 +1,6 @@
-import { state } from '../data.js';
-
-export const createHangMan = () => {
-    const drawMan = state.lives;
-    state.drawArray[drawMan]();
+export const createHangMan = (lives, drawArray, stickMan) => {
+    if (lives > -1) {
+        const drawMan = lives;
+        drawArray[drawMan](stickMan);
+    }
 };

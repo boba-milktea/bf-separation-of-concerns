@@ -1,5 +1,5 @@
 import { state } from '../data.js';
-import { reset } from '../components/reset.js';
+import { handleReset } from './handleReset.js';
 
 export const handleModeClick = (mode) => {
     mode.classList.add('selected');
@@ -8,5 +8,5 @@ export const handleModeClick = (mode) => {
     } else {
         state.numSquares = 6;
     }
-    reset();
+    handleReset();
 };

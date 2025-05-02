@@ -1,14 +1,15 @@
-import { dom } from '../dom.js';
-import { state } from '../data.js';
-
-export const endGame = (draw) => {
-    console.log(draw);
+export const endGame = (
+    draw,
+    winningMessageTextElement,
+    winningMessageElement,
+    circleTurn,
+) => {
     if (draw) {
-        dom.winningMessageTextElement.innerText = 'Draw!';
+        winningMessageTextElement.innerText = 'Draw!';
     } else {
-        dom.winningMessageTextElement.innerText = `${
-            state.circleTurn ? "O's" : "X's"
+        winningMessageTextElement.innerText = `${
+            circleTurn ? "O's" : "X's"
         } Wins!`;
     }
-    dom.winningMessageElement.classList.add('show');
+    winningMessageElement.classList.add('show');
 };

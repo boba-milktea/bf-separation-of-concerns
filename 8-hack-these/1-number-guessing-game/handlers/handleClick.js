@@ -16,19 +16,32 @@ export const handleClick = (e) => {
         dom.guessInput.value = '';
         tempGuess = Number(tempGuess);
         if (isNaN(tempGuess)) {
-            createMessage('Please enter only digits', 'red');
+            createMessage(
+                'Please enter only digits',
+                'red',
+                dom.message,
+                dom.guessInput,
+                dom.btn,
+            );
         } else if (tempGuess === state.num) {
             createMessage(
                 `Correct guess of ${state.num} in ${state.guesses} guesses`,
                 'green',
             );
-            gameOver();
+            const addNum = gameOver(dom.btn, dom.guessInput, state.max);
+            state.max = addNum;
         } else {
             const holder =
                 tempGuess > state.num
                     ? { clr: 'blue', mes: 'Was Lower' }
                     : { clr: 'purple', mes: 'Was Higher' };
-            createMessage(holder.mes, holder.clr);
+            createMessage(
+                holder.mes,
+                holder.clr,
+                dom.message,
+                dom.guessInput,
+                dom.btn,
+            );
         }
     }
 };

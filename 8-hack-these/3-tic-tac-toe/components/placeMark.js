@@ -1,6 +1,4 @@
-import { state } from '../data.js';
-
-export const placeMark = (cell, current) => {
+export const placeMark = (cell, current, inputs) => {
     cell.classList.add(current);
-    state.inputs[cell.id] = current;
+    inputs[cell.id] = current;
 };

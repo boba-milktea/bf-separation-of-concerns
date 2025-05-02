@@ -1,15 +1,12 @@
-import { state } from '../data.js';
-
-export const createUnderlines = (letter) => {
+export const createUnderlines = (letter, space, guesses) => {
     const guessLetter = document.createElement('li');
     guessLetter.className = 'guess';
     if (letter === '-') {
-        guessLetter.innerHTML = '-';
-        state.space = 1;
+        guessLetter.textContent = '-';
+        space = 1;
     } else {
-        guessLetter.innerHTML = '_';
+        guessLetter.textContent = '_';
     }
-
-    state.guesses.push(guessLetter);
+    guesses.push(guessLetter);
     return guessLetter;
 };

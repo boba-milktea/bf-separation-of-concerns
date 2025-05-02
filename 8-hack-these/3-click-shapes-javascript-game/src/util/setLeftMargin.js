@@ -1,7 +1,4 @@
-import { dom } from '../dom/dom.js';
-
-export const setLeftMargin = () => {
-    let maxWidth = dom.gameArea.clientWidth;
+export const setLeftMargin = (maxWidth) => {
     if (maxWidth <= 100) {
         maxWidth = maxWidth + 200;
     } else {
