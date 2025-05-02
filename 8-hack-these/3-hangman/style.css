@@ -134,6 +134,12 @@ button:hover {
     border: solid 1px #fff;
     color: #c1d72e;
 }
+
+.disabled {
+    color: gray;
+    pointer-events: none;
+    opacity: 0.5;
+}
 @media (max-width: 767px) {
     #alphabet {
         padding: 0 0 0 15px;

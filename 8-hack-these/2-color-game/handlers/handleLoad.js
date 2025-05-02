@@ -1,12 +1,15 @@
 import { setupSquares } from '../components/setupSquares.js';
 import { state } from '../data.js';
 import { dom } from '../dom.js';
-import { reset } from '../components/reset.js';
 import { setupMode } from '../components/setupMode.js';
+import { handleReset } from './handleReset.js';
 
 export const handleLoad = () => {
-    reset();
+    handleReset();
     dom.colorDisplay.textContent = state.pickedColor;
-    setupSquares();
-    setupMode();
+    for (let i = 0; i < dom.squares.length; i++) {
+        setupSquares(i, dom.squares, state.colors);
+    }
+
+    setupMode(dom.modeButtons);
 };

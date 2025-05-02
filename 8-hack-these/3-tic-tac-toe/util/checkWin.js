@@ -1,13 +1,7 @@
-import { state } from '../data.js';
-
-export const checkWin = () => {
+export const checkWin = (winCombination, inputs) => {
     let haveAwinner = false;
-    for (const [a, b, c] of state.winCombination) {
-        if (
-            state.inputs[a] &&
-            state.inputs[a] === state.inputs[b] &&
-            state.inputs[a] === state.inputs[c]
-        ) {
+    for (const [a, b, c] of winCombination) {
+        if (inputs[a] && inputs[a] === inputs[b] && inputs[a] === inputs[c]) {
             haveAwinner = true;
         }
     }

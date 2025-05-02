@@ -1,13 +1,10 @@
-import { dom } from '../dom.js';
-import { state } from '../data.js';
-
-export const categoryMessage = () => {
-    dom.catagoryName.innerText =
-        state.chosenCategory === state.categories[0]
+export const categoryMessage = (categoryName, chosenCategory, categories) => {
+    catagoryName.innerText =
+        chosenCategory === categories[0]
             ? 'The Chosen Category Is Premier League Football Teams'
-            : state.chosenCategory === state.categories[1]
+            : chosenCategory === categories[1]
             ? 'The Chosen Category Is Films'
-            : state.chosenCategory === state.categories[2]
+            : chosenCategory === categories[2]
             ? 'The Chosen Category Is Cities'
             : '';
 };

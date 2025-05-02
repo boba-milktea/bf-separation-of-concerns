@@ -7,7 +7,9 @@ export const handleClick = (e) => {
     if (clickedColor === state.pickedColor) {
         dom.messageDisplay.textContent = 'Correct!';
         dom.resetButton.textContent = 'Play Again';
-        changeColor(state.pickedColor);
+        dom.squares.forEach((square) => {
+            changeColor(square, state.pickedColor, dom.h1);
+        });
     } else {
         e.target.style.backgroundColor = '#232323';
         dom.messageDisplay.textContent = 'try again';

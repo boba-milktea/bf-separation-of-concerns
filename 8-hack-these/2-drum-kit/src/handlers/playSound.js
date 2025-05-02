@@ -1,4 +1,7 @@
-import { animateCrashOrRide, animateHiHatClosed } from '../util/animation.js';
+import {
+    animateCrashOrRide,
+    animateHiHatClosed,
+} from '../../components/animation.js';
 
 export const playSound = (e) => {
     const keyCode = e.keyCode,

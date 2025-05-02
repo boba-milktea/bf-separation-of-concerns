@@ -1,5 +1,6 @@
 import { createCells } from '../components/createCells.js';
 import { dom } from '../dom.js';
+import { state } from '../data.js';
 import { startGame } from '../components/startGame.js';
 
 export const handleLoad = () => {
@@ -7,5 +8,11 @@ export const handleLoad = () => {
         const cellElement = createCells(i);
         dom.board.appendChild(cellElement);
     }
-    startGame();
+    startGame(
+        dom.board,
+        state.classX,
+        state.classCircle,
+        state.circleTurn,
+        dom.winningMessageElement,
+    );
 };

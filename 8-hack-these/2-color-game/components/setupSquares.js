@@ -1,10 +1,6 @@
-import { dom } from '../dom.js';
-import { state } from '../data.js';
 import { handleClick } from '../handlers/handleClick.js';
 
-export const setupSquares = () => {
-    for (let i = 0; i < dom.squares.length; i++) {
-        dom.squares[i].backgroundColor = state.colors[i];
-        dom.squares[i].addEventListener('click', handleClick);
-    }
+export const setupSquares = (i, squares, colors) => {
+    squares[i].backgroundColor = colors[i];
+    squares[i].addEventListener('click', handleClick);
 };
